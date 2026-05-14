@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #2D7CFF;
+  --color-primary-container: #2D7CFF;
+  --color-on-primary-container: #FFFFFF;
+  
+  --color-secondary: #2D7CFF;
+  --color-secondary-container: #EFF6FF;
+  
+  --color-tertiary: #60A5FA;
+  --color-tertiary-container: #F8FAFC;
+  
+  /* Light background with cool blue-gray undertones */
+  --color-surface: #F1F5F9;
+  --color-surface-dim: #E2E8F0;
+  --color-surface-container-low: #FFFFFF;
+  --color-surface-container: #F8FAFC;
+  --color-surface-container-high: #CBD5E1;
+  
+  /* High-contrast slate for visibility */
+  --color-on-surface: #1E293B;
+  --color-on-surface-variant: #64748B;
+
+  --glow-cyan: 0 4px 12px rgba(45, 124, 255, 0.15);
+  --glow-blue: 0 4px 12px rgba(45, 124, 255, 0.15);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased selection:bg-primary/20;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-3xl border border-white/60 shadow-[0_10px_40px_0_rgba(15,23,42,0.03)];
+}
+
+.liquid-glass {
+  @apply bg-white/70 backdrop-blur-[40px] border border-white shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_20px_50px_-12px_rgba(0,0,0,0.08),0_10px_20px_-5px_rgba(0,0,0,0.02)];
+}
+
+.card-shadow {
+  @apply shadow-[0_20px_40px_-12px_rgba(0,0,0,0.06),0_10px_20px_-12px_rgba(0,0,0,0.04)];
+}
+
+/* Scrollbar Hide */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none !important;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
