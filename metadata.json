@@ -1,0 +1,6 @@
+{
+  "name": "BreathSync",
+  "description": "A restorative companion app for home ventilators, providing smart sleep tracking, therapy adjustments, and progress insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
